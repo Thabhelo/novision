@@ -1,4 +1,4 @@
-# novision
+# Novision
 
 I just made **novision* and it's a multi-dashboard manager designed specifically for Apple Vision Pro. Inspired by Notion, this project aims to leverage VisionOS to create an innovative and immersive management experience. While the current version (v0) functions as a task manager, future iterations (v1 and v2) will introduce advanced features to support administrators in managing health metric dashboards for multiple child users, potentially in the aviation industry or other sectors. Suggestions for further development are welcome!
 
@@ -47,8 +47,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For questions, suggestions, or contributions, please reach out to:
-- **Website**: [thabheloduve.com](https://www.thabheloduve.com)
-- **Email**: [mailto:thabheloduve@gmail.com](thabheloduve@gmail.com)
-- **GitHub**: [Thabhelo](https://github.com/thabhelo)
+- **Website**: [www.thabheloduve.com](https://www.thabheloduve.com)
+- **Email**: [thabheloduve@gmail.com](mailto:thabheloduve@gmail.com)
+- **GitHub**: [Thabhelo's github](https://github.com/thabhelo)
 
 ---
