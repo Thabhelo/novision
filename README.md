@@ -1,12 +1,16 @@
 # Novision
 
-I just made **novision* and it's a multi-dashboard manager designed specifically for Apple Vision Pro. Inspired by Notion, this project aims to leverage VisionOS to create an innovative and immersive management experience. While the current version (v0) functions as a task manager, future iterations (v1 and v2) will introduce advanced features to support administrators in managing health metric dashboards for multiple child users, potentially in the aviation industry or other sectors. Suggestions for further development are welcome!
+I just made **novision* and it's a multi-dashboard manager designed specifically for Apple Vision Pro. Inspired by Notion, this project aims to leverage VisionOS to create an innovative and immersive management experience ans supports voice commands. While the current version (v0) functions as a task manager, future iterations (v1 and v2) will introduce advanced features to support administrators in managing health metric dashboards for multiple child users, potentially in the aviation industry or other sectors. Suggestions for further development are welcome!
 
 ## v0 Features
 
 - **Task Management**: Organize your tasks into lists, track progress, and manage your to-dos seamlessly within an intuitive Vision Pro interface. Supports grouping by order of progress. 
 - **Multi-Dashboard Support**: Create and switch between multiple dashboards to keep your tasks and projects organized.
-- **VisionOS Integration**: Experience task management like never before with the immersive capabilities of Vision Pro.
+- **VisionOS Integration**: Has immersive capabilities of Vision Pro.
+- **Voice recognition**: Supports voice commands
+---
+<img width="1710" alt="Screenshot 2024-06-16 at 8 02 01 PM" src="https://github.com/Thabhelo/novision/assets/50872400/b97161aa-a5ab-4cc0-a7b5-34b3bcb44124">
+
 
 ## Future Development (v1)
 
