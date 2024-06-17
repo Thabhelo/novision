@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct novisionApp: App {
@@ -13,5 +14,6 @@ struct novisionApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [TodoList.self])
     }
 }

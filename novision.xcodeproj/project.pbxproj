@@ -12,6 +12,8 @@
 		6E1F953E2C1F66B300948279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F953D2C1F66B300948279 /* ContentView.swift */; };
 		6E1F95402C1F66B500948279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1F953F2C1F66B500948279 /* Assets.xcassets */; };
 		6E1F95432C1F66B500948279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1F95422C1F66B500948279 /* Preview Assets.xcassets */; };
+		6E1F954B2C1F692C00948279 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F954A2C1F692C00948279 /* Models.swift */; };
+		6E1F954F2C1FA2DC00948279 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F954E2C1FA2DC00948279 /* TodoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6E1F953F2C1F66B500948279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E1F95422C1F66B500948279 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E1F95442C1F66B500948279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E1F954A2C1F692C00948279 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		6E1F954E2C1FA2DC00948279 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				6E1F953F2C1F66B500948279 /* Assets.xcassets */,
 				6E1F95442C1F66B500948279 /* Info.plist */,
 				6E1F95412C1F66B500948279 /* Preview Content */,
+				6E1F954A2C1F692C00948279 /* Models.swift */,
+				6E1F954E2C1FA2DC00948279 /* TodoListView.swift */,
 			);
 			path = novision;
 			sourceTree = "<group>";
@@ -154,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1F954B2C1F692C00948279 /* Models.swift in Sources */,
 				6E1F953E2C1F66B300948279 /* ContentView.swift in Sources */,
+				6E1F954F2C1FA2DC00948279 /* TodoListView.swift in Sources */,
 				6E1F953C2C1F66B300948279 /* novisionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
