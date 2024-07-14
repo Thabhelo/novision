@@ -1,7 +1,6 @@
 certifi==2024.7.4
 charset-normalizer==2.0.12
 click==8.1.7
-Flask==2.0.2
 idna==3.7
 itsdangerous==2.2.0
 Jinja2==3.1.4
@@ -9,4 +8,5 @@ MarkupSafe==2.1.5
 numpy==1.21.2
 requests==2.26.0
 urllib3==1.26.19
-Werkzeug==3.0.3
+Flask>=2.0.0
+Werkzeug>=2.0.0

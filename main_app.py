@@ -1,20 +1,17 @@
-# main_app.py
-
 from flask import Flask, render_template
-from dashboard.health_dashboard import create_dashboard
+from dashboard import create_dashboard
 
-app = Flask(__name__)
+server = Flask(__name__)
 
-# Initialize the Dash app
-dashboard = create_dashboard(app)
+# Create the Dash app
+dash_app = create_dashboard()
+dash_app.server = server  # Attach the Dash app to the Flask server
 
-@app.route('/')
+# Define a route for the main app
+@server.route('/')
 def index():
-    return render_template('index.html')
-
-@app.route('/dashboard')
-def dashboard_route():
-    return dashboard.index()
+    return 'Welcome to the Vision Pro App!'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Run the combined Flask and Dash server
+    server.run(debug=True)
