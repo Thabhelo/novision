@@ -1,14 +1,8 @@
-import sys
-from typing import Any, List, Set
+from typing import Any, Literal, Final
 
-if sys.version_info >= (3, 8):
-    from typing import Literal, Final
-else:
-    from typing_extensions import Literal, Final
+__all__: list[str]
 
-__all__: List[str]
-
-EXPECTED_KEYS: Final[Set[str]]
+EXPECTED_KEYS: Final[set[str]]
 MAGIC_PREFIX: Final[bytes]
 MAGIC_LEN: Literal[8]
 ARRAY_ALIGN: Literal[64]

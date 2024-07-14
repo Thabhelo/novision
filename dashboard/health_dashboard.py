@@ -69,6 +69,5 @@ def create_dashboard(server):
 
 if __name__ == '__main__':
     # For standalone testing
-    server = None
-    app = create_dashboard(server)
+    app = create_dashboard(None)
     app.run_server(debug=True)

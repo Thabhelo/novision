@@ -1,16 +1,4 @@
-from typing import Any, List
-
-from numpy.typing import _ShapeLike, _Shape
-
-__all__: List[str]
-
-class DummyArray:
-    __array_interface__: Any
-    base: Any
-    def __init__(self, interface, base=...): ...
-
-def as_strided(x, shape=..., strides=..., subok=..., writeable=...): ...
-def sliding_window_view(x, window_shape, axis=..., *, subok=..., writeable=...): ...
-def broadcast_to(array, shape, subok=...): ...
-def broadcast_shapes(*args: _ShapeLike) -> _Shape: ...
-def broadcast_arrays(*args, subok=...): ...
+from numpy.lib._stride_tricks_impl import (
+    as_strided as as_strided,
+    sliding_window_view as sliding_window_view,
+)

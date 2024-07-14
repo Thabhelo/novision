@@ -1,14 +1,14 @@
-import sys
-from typing import List, Any
-import numpy as np
+from typing import Any
 
+import numpy as np
+import numpy.typing as npt
 
 class Index:
     def __index__(self) -> int:
         return 0
 
 
-class SubClass(np.ndarray):
+class SubClass(npt.NDArray[np.float64]):
     pass
 
 
@@ -23,12 +23,11 @@ B = A.view(SubClass).copy()
 B_stack = np.array([[1], [1]]).view(SubClass)
 C = [1]
 
-if sys.version_info >= (3, 8):
-    np.ndarray(Index())
-    np.ndarray([Index()])
+np.ndarray(Index())
+np.ndarray([Index()])
 
 np.array(1, dtype=float)
-np.array(1, copy=False)
+np.array(1, copy=None)
 np.array(1, order='F')
 np.array(1, order=None)
 np.array(1, subok=True)
