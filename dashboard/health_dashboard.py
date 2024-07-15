@@ -7,13 +7,13 @@ import pickle
 
 def create_dashboard(server):
     # Load the data
-    df = pd.read_csv('synthetic_health_data.csv')
+    df = pd.read_csv('data/synthetic_health_data.csv')
 
     # Load the trained model and scaler
-    with open('model.pkl', 'rb') as f:
+    with open('models/model.pkl', 'rb') as f:
         model = pickle.load(f)
 
-    with open('scaler.pkl', 'rb') as f:
+    with open('models/scaler.pkl', 'rb') as f:
         scaler = pickle.load(f)
 
     # Initialize the Dash app
