@@ -17,6 +17,8 @@ def create_dashboard(server):
         scaler = pickle.load(f)
 
     # Initialize the Dash app
+    if server is None:
+        server = True   
     app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
     # Layout of the app
@@ -69,5 +71,5 @@ def create_dashboard(server):
 
 if __name__ == '__main__':
     # For standalone testing
-    app = create_dashboard(None)
+    app = create_dashboard(server=None)
     app.run_server(debug=True)
