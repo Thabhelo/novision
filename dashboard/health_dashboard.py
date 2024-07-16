@@ -4,8 +4,9 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pickle
+from flask import Flask
 
-def create_dashboard(server):
+def create_dashboard(server=None):
     # Load the data
     df = pd.read_csv('data/synthetic_health_data.csv')
 
@@ -17,6 +18,9 @@ def create_dashboard(server):
         scaler = pickle.load(f)
 
     # Initialize the Dash app
+    if server is None:
+        server = True  # Use Dash's internal Flask server for standalone testing
+    
     app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
     # Layout of the app
@@ -54,7 +58,7 @@ def create_dashboard(server):
         temperature_fig = px.histogram(filtered_df, x='Temperature', nbins=20, title='Temperature Distribution')
         
         # Example data point for prediction (mean values)
-        example_data = filtered_df[['HeartRate', 'OxygenSaturation', 'BloodPressure_Systolic', 'Temperature']].mean().values.reshape(1, -1)
+        example_data = filtered_df[['HeartRate', 'OxygenSaturation', 'BloodPressure_Systolic', 'Temperature']].mean().to_frame().T
         
         # Standardize the example data
         example_data = scaler.transform(example_data)
@@ -69,5 +73,5 @@ def create_dashboard(server):
 
 if __name__ == '__main__':
     # For standalone testing
-    app = create_dashboard(None)
+    app = create_dashboard(server=True)
     app.run_server(debug=True)

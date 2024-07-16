@@ -1,11 +1,10 @@
 from flask import Flask, render_template
-from dashboard import create_dashboard
+from dashboard.health_dashboard import create_dashboard
 
 server = Flask(__name__)
 
-# Create the Dash app
-dash_app = create_dashboard()
-dash_app.server = server  # Attach the Dash app to the Flask server
+# Create the Dash app with the Flask server
+dash_app = create_dashboard(server=None)
 
 # Define a route for the main app
 @server.route('/')
