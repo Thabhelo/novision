@@ -58,7 +58,7 @@ def create_dashboard(server=None):
         temperature_fig = px.histogram(filtered_df, x='Temperature', nbins=20, title='Temperature Distribution')
         
         # Example data point for prediction (mean values)
-        example_data = filtered_df[['HeartRate', 'OxygenSaturation', 'BloodPressure_Systolic', 'Temperature']].mean().to_frame().T
+        example_data = filtered_df[['HeartRate', 'OxygenSaturation', 'BloodPressure_Systolic', 'BloodPressure_Diastolic', 'Temperature']].mean().to_frame().T
         
         # Standardize the example data
         example_data = scaler.transform(example_data)
