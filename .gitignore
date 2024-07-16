@@ -1,0 +1,14 @@
+# Python .gitignore file
+# Byte-compiled / optimized / DLL files
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+*.dll
+
+# Other exemptions
+venv/
+env/
+/venv
