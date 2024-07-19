@@ -7,13 +7,18 @@
 
 import SwiftUI
 import SwiftData
+import CoreData
 
 @main
 struct novisionApp: App {
+    let persistenceController = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
-        .modelContainer(for: [TodoList.self])
+        .modelContainer(for: [Passenger.self])
     }
 }
+
