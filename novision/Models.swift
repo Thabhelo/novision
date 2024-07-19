@@ -1,4 +1,3 @@
-//
 //  Models.swift
 //  novision
 //
@@ -7,25 +6,29 @@
 
 import Foundation
 import SwiftData
+import CoreData
+
 
 @Model
-class TodoList {
-    var title: String
-    
-    @Relationship(deleteRule: .cascade)
-    var items: [TodoItem] = []
-    
-    init(title: String) {
-        self.title = title
+class Passenger {
+    var name: String
+    var age: Int
+    var heartRate: Double
+    var oxygenSaturation: Double
+    var bloodPressureSystolic: Double
+    var bloodPressureDiastolic: Double
+    var temperature: Double
+    var condition: String
+
+    init(name: String, age: Int, heartRate: Double, oxygenSaturation: Double, bloodPressureSystolic: Double, bloodPressureDiastolic: Double, temperature: Double, condition: String) {
+        self.name = name
+        self.age = age
+        self.heartRate = heartRate
+        self.oxygenSaturation = oxygenSaturation
+        self.bloodPressureSystolic = bloodPressureSystolic
+        self.bloodPressureDiastolic = bloodPressureDiastolic
+        self.temperature = temperature
+        self.condition = condition
     }
 }
 
-@Model
-class TodoItem {
-    var title: String
-    var isDone: Bool = false
-    
-    init(title: String) {
-        self.title = title
-    }
-}
