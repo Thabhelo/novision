@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 import CoreData
 
-
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.managedObjectContext) private var viewContext
@@ -75,7 +74,7 @@ struct ContentView: View {
                 }
             }
         } detail: {
-            if let selectedPassenger {let _: NSFetchRequest<NSManagedObject> = NSFetchRequest<NSManagedObject>(entityName: "Passenger")
+            if let selectedPassenger {
                 PassengerHealthView(passenger: selectedPassenger)
             } else {
                 VStack {
@@ -83,14 +82,19 @@ struct ContentView: View {
                         .font(.largeTitle)
                         .foregroundColor(.gray)
                     
-                    NavigationLink(destination: DashboardView(url: URL(string: "http://127.0.0.1:8050/dashboard/")!)) {
-                        Text("Go to Health Dashboard")
-                            .font(.title)
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
+                    if let dashboardURL = URL(string: "http://127.0.0.1:8050/dashboard/") {
+                                            NavigationLink(destination: DashboardView(url: dashboardURL)) {
+                                                Text("Go to Health Dashboard")
+                                                    .font(.title)
+                                                    .padding()
+                                                    .background(Color.blue)
+                                                    .foregroundColor(.white)
+                                                    .cornerRadius(10)
+                                            }
+                                        } else {
+                                            Text("Invalid URL for the Health Dashboard")
+                                                .foregroundColor(.red)
+                                        }
                 }
             }
         }
@@ -103,11 +107,11 @@ struct ContentView: View {
         let fetchRequest: NSFetchRequest<PassengerEntity> = PassengerEntity.fetchRequest()
 
         do {
-            let fetchedPassengers = try viewContext.fetch(fetchRequest )
+            let fetchedPassengers = try viewContext.fetch(fetchRequest)
             return fetchedPassengers.map { passengerEntity in
                 Passenger(
                     name: passengerEntity.name ?? "",
-                    age: passengerEntity.age,
+                    age: Int(passengerEntity.age), // Convert Int16 to Int
                     heartRate: passengerEntity.heartRate,
                     oxygenSaturation: passengerEntity.oxygenSaturation,
                     bloodPressureSystolic: passengerEntity.bloodPressureSystolic,
