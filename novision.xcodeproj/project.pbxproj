@@ -17,8 +17,8 @@
 		6ED151562C48E856004837D0 /* PassengerHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED151552C48E856004837D0 /* PassengerHealthView.swift */; };
 		6ED151582C48F45B004837D0 /* PersistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED151572C48F45B004837D0 /* PersistanceController.swift */; };
 		6ED1515C2C49D86E004837D0 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1515B2C49D86E004837D0 /* Passenger.swift */; };
-		6ED1515E2C4A00D8004837D0 /* PassengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1515D2C4A00D8004837D0 /* PassengerEntity.swift */; };
 		6ED151612C4A11FE004837D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED151602C4A11FE004837D0 /* CoreData.framework */; };
+		6ED151692C4CACE6004837D0 /* novisionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6ED151672C4CACE6004837D0 /* novisionDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		6ED151552C48E856004837D0 /* PassengerHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerHealthView.swift; sourceTree = "<group>"; };
 		6ED151572C48F45B004837D0 /* PersistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceController.swift; sourceTree = "<group>"; };
 		6ED1515B2C49D86E004837D0 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
-		6ED1515D2C4A00D8004837D0 /* PassengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerEntity.swift; sourceTree = "<group>"; };
 		6ED151602C4A11FE004837D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6ED151682C4CACE6004837D0 /* novisionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = novisionDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 				6ED151552C48E856004837D0 /* PassengerHealthView.swift */,
 				6ED151572C48F45B004837D0 /* PersistanceController.swift */,
 				6ED1515B2C49D86E004837D0 /* Passenger.swift */,
-				6ED1515D2C4A00D8004837D0 /* PassengerEntity.swift */,
+				6ED151672C4CACE6004837D0 /* novisionDataModel.xcdatamodeld */,
 			);
 			path = novision;
 			sourceTree = "<group>";
@@ -186,10 +186,10 @@
 			files = (
 				6E1F954B2C1F692C00948279 /* Models.swift in Sources */,
 				6ED1515C2C49D86E004837D0 /* Passenger.swift in Sources */,
+				6ED151692C4CACE6004837D0 /* novisionDataModel.xcdatamodeld in Sources */,
 				6ED151562C48E856004837D0 /* PassengerHealthView.swift in Sources */,
 				6E1F953E2C1F66B300948279 /* ContentView.swift in Sources */,
 				6ED151542C48E6E8004837D0 /* DashboardView.swift in Sources */,
-				6ED1515E2C4A00D8004837D0 /* PassengerEntity.swift in Sources */,
 				6E1F953C2C1F66B300948279 /* novisionApp.swift in Sources */,
 				6ED151582C48F45B004837D0 /* PersistanceController.swift in Sources */,
 			);
@@ -394,6 +394,19 @@
 			productName = RealityKitContent;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6ED151672C4CACE6004837D0 /* novisionDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6ED151682C4CACE6004837D0 /* novisionDataModel.xcdatamodel */,
+			);
+			currentVersion = 6ED151682C4CACE6004837D0 /* novisionDataModel.xcdatamodel */;
+			path = novisionDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6E1F952C2C1F66B300948279 /* Project object */;
 }
