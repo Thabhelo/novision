@@ -52,7 +52,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions, suggestions, or contributions, please reach out to:
 - **Website**: [www.thabheloduve.com](https://www.thabheloduve.com)
-- **Email**: [thabhelo@deepubuntu.com](mailto:thabhelo@deepubuntu.com)
 - **GitHub**: [Thabhelo's github](https://github.com/thabhelo)
 
 ---
